@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Temperatura">
+
+    <EditText
+        android:id="@+id/tempInput"
+        android:layout_width="251dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:hint="Introduzca una temperatura"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/seleccionaUnidad"
+        android:layout_width="250dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="21dp"
+        android:text="Selecciona la unidad"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/kelvinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempInput" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <CheckBox
+            android:id="@+id/kelvinBox"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="18dp"
+            android:text="K"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/celsiusBox"
+            android:backgroundTint="@color/teal_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/celsiusBox"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="18dp"
+            android:text="ºC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/farenheitBox"
+            android:backgroundTint="@color/teal_700"
+            app:layout_constraintStart_toEndOf="@+id/kelvinBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/farenheitBox"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="86dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="ºF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/celsiusBox"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/seleccionnUnidadFinal"
+        android:layout_width="407dp"
+        android:layout_height="65dp"
+        android:text="¿A qué unidad quieres transformarla?"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <Button
+            android:id="@+id/kelvinButton2"
+            android:layout_width="63dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="K"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/celsiusButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/celsiusButton2"
+            android:layout_width="63dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="ºC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/farenheitButton2"
+            app:layout_constraintStart_toEndOf="@+id/kelvinButton2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/farenheitButton2"
+            android:layout_width="63dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="86dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="ºF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/celsiusButton2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="291dp">
+
+        <TextView
+            android:id="@+id/resultadoTemp"
+            android:layout_width="286dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="170dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
