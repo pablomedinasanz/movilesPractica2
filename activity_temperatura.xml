@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondogris"
     tools:context=".Temperatura">
 
     <EditText
@@ -29,8 +30,10 @@
         android:layout_marginTop="19dp"
         android:layout_marginEnd="81dp"
         android:layout_marginBottom="21dp"
+        android:fontFamily="@font/cabin"
         android:text="Selecciona la unidad"
         android:textAlignment="center"
+        android:textColor="@color/teal_700"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/kelvinButton"
@@ -53,6 +56,7 @@
             android:text="K"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/celsiusBox"
+            android:textColor="@color/teal_700"
             android:backgroundTint="@color/teal_700"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,6 +72,7 @@
             android:text="ºC"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/farenheitBox"
+            android:textColor="@color/teal_700"
             android:backgroundTint="@color/teal_700"
             app:layout_constraintStart_toEndOf="@+id/kelvinBox"
             app:layout_constraintTop_toTopOf="parent"
@@ -81,6 +86,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="86dp"
             android:layout_marginBottom="16dp"
+            android:textColor="@color/teal_700"
             android:backgroundTint="@color/teal_700"
             android:text="ºF"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -94,8 +100,10 @@
         android:id="@+id/seleccionnUnidadFinal"
         android:layout_width="407dp"
         android:layout_height="65dp"
+        android:fontFamily="@font/cabin"
         android:text="¿A qué unidad quieres transformarla?"
         android:textAlignment="center"
+        android:textColor="@color/teal_700"
         android:textSize="22sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="2dp"
@@ -156,21 +164,25 @@
         android:layout_width="match_parent"
         android:layout_height="291dp">
 
-        <TextView
-            android:id="@+id/resultadoTemp"
-            android:layout_width="286dp"
-            android:layout_height="77dp"
-            android:layout_marginStart="62dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="63dp"
-            android:layout_marginBottom="170dp"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultadoTemp"
+                android:layout_width="286dp"
+                android:layout_height="77dp"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="63dp"
+                android:layout_marginBottom="170dp"
+                android:background="#40009688"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

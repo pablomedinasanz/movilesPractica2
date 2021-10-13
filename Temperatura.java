@@ -87,7 +87,7 @@ public class Temperatura extends AppCompatActivity {
                 if (uCambio.equals("ºC")) {
                     numero = numero - 273.15;
                     resultado.setText(String.valueOf(numero) + "ºC");
-                } else if (uCambio.equals("Fº")) {
+                } else if (uCambio.equals("ºF")) {
                     numero = 1.8 * (numero - 273.15) + 32;
                     resultado.setText(String.valueOf(numero) + "Fº");
                 } else if (uCambio.equals("K")) {
@@ -100,7 +100,7 @@ public class Temperatura extends AppCompatActivity {
                 if (uCambio.equals("ºC")) {
                     numero = numero;
                     resultado.setText(String.valueOf(numero) + "ºC");
-                } else if (uCambio.equals("Fº")) {
+                } else if (uCambio.equals("ºF")) {
                     numero = numero * 1.8 + 32;
                     resultado.setText(String.valueOf(numero) + "Fº");
                 } else if (uCambio.equals("K")) {
@@ -109,11 +109,11 @@ public class Temperatura extends AppCompatActivity {
                 }
                 break;
 
-            case "Fº":
+            case "ºF":
                 if (uCambio.equals("ºC")) {
                     numero = (numero - 32) / 1.8;
                     resultado.setText(String.valueOf(numero) + "ºC");
-                } else if (uCambio.equals("Fº")) {
+                } else if (uCambio.equals("ºF")) {
                     numero = numero;
                     resultado.setText(String.valueOf(numero) + "Fº");
                 } else if (uCambio.equals("K")) {

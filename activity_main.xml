@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondogris"
     tools:context=".MainActivity" >
 
     <TextView
         android:id="@+id/tituloPrincipal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
         android:text="¿Qué quieres calcular?"
         android:textAlignment="center"
         android:textColor="#009688"
@@ -22,12 +24,16 @@
         android:layout_width="match_parent"
         android:layout_height="326dp"
         android:backgroundTint="@color/teal_700"
-        android:text="Años bisiestos" />
+        android:fontFamily="@font/cabin"
+        android:text="Años bisiestos"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/tempButton"
         android:layout_width="match_parent"
         android:layout_height="326dp"
         android:backgroundTint="@color/teal_700"
-        android:text="CAMBIOS DE TEMPERATURA" />
+        android:fontFamily="@font/cabin"
+        android:text="CAMBIOS DE TEMPERATURA"
+        android:textStyle="bold" />
 </LinearLayout>
